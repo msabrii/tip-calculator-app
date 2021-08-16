@@ -48,6 +48,7 @@ input:focus {
   align-items: center;
   justify-content: space-around;
   padding: 1.5rem;
+  min-height: 95vh;
 }
 
 .logo {
@@ -74,7 +75,7 @@ input:focus {
   align-items: center;
 }
 
-.input-form-logo {
+.input-form-logo {  
   width: 20px;
   height: 25px;
   /* transform: translate(50px); */
@@ -158,6 +159,15 @@ input:focus {
 }
 
 @media screen and (min-width: 700px) {
+  
+  .main {
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 3rem;
+  }
+  
   .bg-card {
     display: flex;
     justify-content: center;
