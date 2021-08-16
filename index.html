@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Splitter Logo" />
+      </div>
+      <div class="bg-card">
+        <div class="input-details">
+          <div class="bill">
+            <form action="" class="form-group">
+              <label for="bill-input">Bill</label>
+              <div class="input-form">
+                <img class="input-form-logo" src="images/icon-dollar.svg" alt="">
+                <input
+                  id="bill-input"
+                  type="text"
+                  value="54"
+                  oninput="calculateTip()"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="tip">
+            <h2>Select Tip %</h2>
+            <div class="tip-grid">
+              <button
+                class="tip-button"
+                id="five-percent-btn"
+                onclick="calculateTip()"
+              >
+                5%
+              </button>
+              <button class="tip-button" id="ten-percent-btn">10%</button>
+              <button class="tip-button" id="fifteen-percent-btn">15%</button>
+              <button class="tip-button" id="twenty-five-percent-btn">
+                25%
+              </button>
+              <button class="tip-button" id="fifty-percent-btn">50%</button>
+              <button class="tip-button" id="custom-percent-input">
+                Custom
+              </button>
+            </div>
+          </div>
+          <div class="num-people">
+            <form action="" class="form-group">
+              <label for="num-people-input">Number of People</label>
+              <div class="input-form">
+                <img class="input-form-logo" src="images/icon-person.svg" alt="">
+                <input
+                  id="num-people-input"
+                  oninput="calculateTip()"
+                  type="text"
+                  value="3"
+                />
+              </div>  
+            </form>
+          </div>
+        </div>
+        <div class="total-card">
+          <div class="total-row">
+            <div class="total-label">
+              <h2>Tip Amount</h2>
+              <h3>/ person</h3>
+            </div>
+            <div class="calculated-tip-amount" id="calculated-tip-amount">
+              &dollar;4.27
+            </div>
+          </div>
+          <div class="total-row">
+            <div class="total-label">
+              <h2>Total</h2>
+              <h3>/ person</h3>
+            </div>
+            <div class="calculated-total-amount" id="calculated-total-amount">
+              &dollar;32.79
+            </div>
+          </div>
+
+          <button type="reset" id="reset-btn" class="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Sheikh Ameer Sabri</a>.
+    </div>
+  </body>
+</html>
