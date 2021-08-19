@@ -73,13 +73,19 @@ input:focus {
 .input-form {
   display: flex;
   align-items: center;
+  position: relative;
+  /* transform: translate(-20px); */
+  width: 100%;
 }
 
-.input-form-logo {  
+.input-form-logo {
   width: 20px;
   height: 25px;
-  /* transform: translate(50px); */
-  /* height: 3rem; */
+  /* transform: translate(30px); */
+  position: absolute;
+  left: 20px;
+  height: 18px;
+  width: 14px;
 }
 
 .tip-grid {
@@ -89,19 +95,36 @@ input:focus {
 }
 
 .tip-button {
-  padding: 0.5rem;
+  padding: 0.8rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: white;
   background-color: hsl(183, 100%, 15%);
   border: 0;
   border-radius: 8px;
-  min-height: 7vh;
+  min-height: 5.5vh;
   transition: background-color 0.15s, color 0.15s;
 }
 
-.tip-button:focus {
+.custom-tip-button {
+  font-size: 1.2rem;
+  color: hsl(172, 67%, 45%);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 8px;
+  min-height: 4vh;
+  font-weight: 700;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.tip-button-normal {
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.tip-button-pressed {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
@@ -154,12 +177,11 @@ input:focus {
   transition: background-color 0.15s;
 }
 
-.reset-btn:focus {
+.reset-btn:active {
   background-color: hsl(189, 41%, 97%);
 }
 
 @media screen and (min-width: 700px) {
-  
   .main {
     justify-content: center;
   }
@@ -167,32 +189,33 @@ input:focus {
   .logo {
     margin: 3rem;
   }
-  
+
   .bg-card {
     display: flex;
     justify-content: center;
-    min-width: 65vw;
+    min-width: 55vw;
     min-height: 40vh;
     border-radius: 20px;
+    padding: 2rem;
   }
 
   .total-card {
-      min-height: 10vh;
-      justify-content: center;
-      min-width: 50%;
+    min-height: 10vh;
+    justify-content: center;
+    min-width: 50%;
   }
 
   .tip-grid {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto
+    grid-template-rows: auto;
   }
 
   .tip-button {
-      min-height: 3vh;
-      min-width: 75px;
+    min-height: 3vh;
+    min-width: 75px;
   }
 
   .input-details {
-      margin-right: 1.5rem;
+    margin-right: 1.5rem;
   }
 }

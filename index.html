@@ -45,7 +45,7 @@
                 <input
                   id="bill-input"
                   type="text"
-                  value="54"
+                  value=""
                   oninput="calculateTip()"
                 />
               </div>
@@ -67,9 +67,9 @@
                 25%
               </button>
               <button class="tip-button" id="fifty-percent-btn">50%</button>
-              <button class="tip-button" id="custom-percent-input">
-                Custom
-              </button>
+              <input class="custom-tip-button" id="custom-percent-input" placeholder="Custom" type="number">
+          
+            </input>
             </div>
           </div>
           <div class="num-people">
@@ -81,7 +81,7 @@
                   id="num-people-input"
                   oninput="calculateTip()"
                   type="text"
-                  value="3"
+                  value=""
                 />
               </div>  
             </form>
@@ -94,7 +94,7 @@
               <h3>/ person</h3>
             </div>
             <div class="calculated-tip-amount" id="calculated-tip-amount">
-              &dollar;4.27
+              &dollar;0
             </div>
           </div>
           <div class="total-row">
@@ -103,7 +103,7 @@
               <h3>/ person</h3>
             </div>
             <div class="calculated-total-amount" id="calculated-total-amount">
-              &dollar;32.79
+              &dollar;0
             </div>
           </div>
 
